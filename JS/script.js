@@ -56,3 +56,15 @@ let PriceOver65 =  Price18_65 * 0.6;
 console.log("Prezzo (€)", Price18_65);
 console.log("Prezzo per under 18 (€)", PriceUnder18);
 console.log("Prezzo per over 65 (€)", PriceOver65);
+
+
+
+// d. Stampare in pagina con massimo due decimali
+
+if(userAge < 18){
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceUnder18}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+} else if (userAge > 65){
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceOver65}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+} else {
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${Price18_65}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+}
