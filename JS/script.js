@@ -47,11 +47,17 @@ console.log("Età", userAge);
 
 
 
-// c. Istruzioni per calcolare il prezzo
+// c. Istruzioni per calcolare il prezzo (+ regola approssimazione dei decimali)
 
 let Price18_65 = 0.21 * userKm; 
+Price18_65 = Price18_65.toFixed(2);
+
 let PriceUnder18 = Price18_65 * 0.8;
+PriceUnder18 = PriceUnder18.toFixed(2);
+
 let PriceOver65 =  Price18_65 * 0.6;
+PriceOver65 = PriceOver65.toFixed(2);
+
 
 console.log("Prezzo (€)", Price18_65);
 console.log("Prezzo per under 18 (€)", PriceUnder18);
@@ -59,12 +65,14 @@ console.log("Prezzo per over 65 (€)", PriceOver65);
 
 
 
-// d. Stampare in pagina con massimo due decimali
+// d. Stampare in pagina
 
 if(userAge < 18){
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceUnder18}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceUnder18}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
+
 } else if (userAge > 65){
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceOver65}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceOver65}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
+
 } else {
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${Price18_65}€. Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${Price18_65}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
 }
