@@ -67,12 +67,17 @@ console.log("Prezzo per over 65 (€)", PriceOver65);
 
 // d. Stampare in pagina
 
+document.getElementById("km").innerHTML = `Lei deve percorrere: ${userKm}Km`;
+
+document.getElementById("age").innerHTML = `Lei ha ${userAge} anni`;
+
+
 if(userAge < 18){
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceUnder18}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceUnder18}€. <br> Ci auguriamo possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
 
 } else if (userAge > 65){
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceOver65}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${PriceOver65}€. <br> Ci auguriamo possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
 
 } else {
-  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${Price18_65}€. <br> Ci auguriamo tu possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
+  document.getElementById("output").innerHTML = `Caro viaggiatore, questo è il prezzo del tuo biglietto ${Price18_65}€. <br> Ci auguriamo possa trascorrere uno splendido viaggio in orario (non come con trenitalia). <br> A presto!`;
 }

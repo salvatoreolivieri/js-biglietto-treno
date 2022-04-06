@@ -1,0 +1,19 @@
+
+.custom-margin{
+  margin: 0px;
+}
+
+.left-column{
+  border-right: 1px solid black;
+}
+
+.hero-section,
+.output-container{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.column-container,
+.button-container{
+  border: 1px solid black;
+}

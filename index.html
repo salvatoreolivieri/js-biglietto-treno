@@ -4,13 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
   <title>Biglietto Treno</title>
 </head>
 <body>
 
-  <h1>Calcolo prezzo biglietto del treno</h1>
+  <div class="container text-center py-4 hero-section">
+    
+    <h1 class="pb-3">Ticket Price Calculator</h1>
+    
+    <h2>Gentile viaggiatore, ecco i dati da lei forniti</h2>
 
-  <p id="output"></p>
+  </div>
+
+  <div class="container text-center column-container">
+    <div class="row row-cols-2">
+      <div class="col debug p-2 left-column" id="km"></div>
+      <div class="col debug p-2" id="age"></div>
+    </div>
+  </div>
+
+  <div class="container text-center output-container p-2">
+    <p id="output" class="custom-margin"></p>
+  </div>
+
+  <div class="container text-center button-container p-2">
+    <a class="btn btn-primary" href="#">Acquista Biglietto</a>
+    <a class="btn btn-danger" href="">Aggiorna dati</a>
+  </div>
 
   <script src="JS/script.js"></script>
 </body>
