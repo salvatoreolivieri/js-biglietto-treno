@@ -19,8 +19,8 @@
 
   a. Definire le variabili dell'utente (chilometri da percorrere ed età)
   b. Inserire degli alert nel caso non vengano scritti dei numeri decimali
-  b. Istruzioni per calcolare il prezzo
-  c. Stampare in pagina con massimo due decimali
+  c. Istruzioni per calcolare il prezzo
+  d. Stampare in pagina con massimo due decimali
 */
 
 
@@ -31,14 +31,14 @@
 const userKm = prompt("Inserisci i chilometri (espressi in numero decimale) che percorrerai.");
 
 if (isNaN(userKm)){
-  alert("Attenzione inserisci un numero decimale")
+  alert("Attenzione inserisci un numero decimale");
 }
 
 
-const userAge = prompt("Inserisci la tua età (sempre in numero decimale). La useremo per calcolare gli sconti a tua disposizione (se sei una signora promettiamo di non dirlo a nessuno)")
+const userAge = prompt("Inserisci la tua età (sempre in numero decimale). La useremo per calcolare gli sconti a tua disposizione (se sei una signora promettiamo di non dirlo a nessuno)");
 
 if (isNaN(userAge)){
-  alert("Attenzione inserisci un numero decimale")
+  alert("Attenzione inserisci un numero decimale");
 }
 
 
@@ -47,3 +47,12 @@ console.log("Età", userAge);
 
 
 
+// c. Istruzioni per calcolare il prezzo
+
+let Price18_65 = 0.21 * userKm; 
+let PriceUnder18 = Price18_65 * 0.8;
+let PriceOver65 =  Price18_65 * 0.6;
+
+console.log("Prezzo (€)", Price18_65);
+console.log("Prezzo per under 18 (€)", PriceUnder18);
+console.log("Prezzo per over 65 (€)", PriceOver65);
