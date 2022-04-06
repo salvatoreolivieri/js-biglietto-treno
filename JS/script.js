@@ -25,11 +25,25 @@
 
 
 
-// Definire le variabili dell'utente
+// a. Definire le variabili dell'utente
+// b. Inserire degli alert nel caso non vengano scritti dei numeri decimali
 
 const userKm = prompt("Inserisci i chilometri (espressi in numero decimale) che percorrerai.");
+
+if (isNaN(userKm)){
+  alert("Attenzione inserisci un numero decimale")
+}
+
+
 const userAge = prompt("Inserisci la tua età (sempre in numero decimale). La useremo per calcolare gli sconti a tua disposizione (se sei una signora promettiamo di non dirlo a nessuno)")
+
+if (isNaN(userAge)){
+  alert("Attenzione inserisci un numero decimale")
+}
+
 
 console.log("Chilometri (km)", userKm);
 console.log("Età", userAge);
+
+
 
